@@ -112,30 +112,42 @@ The car is more aligned to the right hand side of the road, probably get overfit
 #### 2. Final Model Architecture
 ------------------------------------------------------------
 | Normalized			| Lamda x/255 - 0.5                |
+
 | Cropping images       | Cropping top 70, bottome 25      |
+
 | Convolution 2D	    | 24 5x5 stride 2x2 and relu       |
+
 | Convolution 2D	    | 36 5x5 tride 2x5 and relu        |
+
 | Convolution 2D	    | 48 5x5 stride 2x2 and relu       |
+
 | Convolution 2D	    | 48 5x5 stride 2x2 and relu       |
+
 | Convolution 2D	    | 48 5x5 stride 2x2 and relu       |
+
 | Flatten			    |       						   |
+
 | Dropout			    | 0.5      						   |
+
 | Dense 			    | Output 100      		     	   |
+
 | Dense 			    | Output 50      		     	   |
+
 | Dense 			    | Output 10      		     	   |
+
 | Dense 			    | Output 1      		     	   |
 ------------------------------------------------------------
 
-![alt text]Training Mean Square Loss[image1]
+Training Mean Square Loss[image1]
 
 #### 3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![alt text]Training Video[image2]
+Training Video[image2]
 
 
 ##### 4. Final Result
 The video show the car is able to drive at least 2 laps autonomously. 
 
-![alt text]Autonomous Video[image3]
+Autonomous Video[image3]
