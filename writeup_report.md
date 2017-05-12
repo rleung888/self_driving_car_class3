@@ -160,10 +160,10 @@ Training Mean Square Loss[image1]
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-Training Video[image2]
+Training Video, trainrun.mp4 [image2]
 
 
 ##### 4. Final Result
 The video show the car is able to drive at least 2 laps autonomously. 
 
-Autonomous Video[image3]
+Autonomous Video video.mp4 [image3]
