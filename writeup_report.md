@@ -53,19 +53,33 @@ The model.py file contains the code for training and saving the convolution neur
 Basically I am using the Nvidia Architecture with slight change by adding a dropout layer and cropping the unnessary part
 
 ------------------------------------------------------------
+
 | Normalized			| Lamda x/255 - 0.5                |
+
 | Cropping images       | Cropping top 70, bottome 25      |
+
 | Convolution 2D	    | 24 5x5 stride 2x2 and relu       |
+
 | Convolution 2D	    | 36 5x5 tride 2x5 and relu        |
+
 | Convolution 2D	    | 48 5x5 stride 2x2 and relu       |
+
 | Convolution 2D	    | 48 5x5 stride 2x2 and relu       |
+
 | Convolution 2D	    | 48 5x5 stride 2x2 and relu       |
+
 | Flatten			    |       						   |
+
 | Dropout			    | 0.5      						   |
+
 | Dense 			    | Output 100      		     	   |
+
 | Dense 			    | Output 50      		     	   |
+
 | Dense 			    | Output 10      		     	   |
+
 | Dense 			    | Output 1      		     	   |
+
 ------------------------------------------------------------
 
 
@@ -111,6 +125,7 @@ The car is more aligned to the right hand side of the road, probably get overfit
 
 #### 2. Final Model Architecture
 ------------------------------------------------------------
+
 | Normalized			| Lamda x/255 - 0.5                |
 
 | Cropping images       | Cropping top 70, bottome 25      |
@@ -136,6 +151,7 @@ The car is more aligned to the right hand side of the road, probably get overfit
 | Dense 			    | Output 10      		     	   |
 
 | Dense 			    | Output 1      		     	   |
+
 ------------------------------------------------------------
 
 Training Mean Square Loss[image1]
