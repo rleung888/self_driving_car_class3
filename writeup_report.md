@@ -23,12 +23,12 @@ The goals / steps of this project are the following:
 
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Files Submitted & Code Quality
+### Files Submitted & Code Quality
 
-####1. Submission includes all required files and can be used to run the simulator in autonomous mode
+#### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
 * model.py containing the script to create and train the model  -- SUBMITTED 
@@ -36,19 +36,19 @@ My project includes the following files:
 * model.h5 containing a trained convolution neural network -- SUBMITTED
 * writeup_report.md or writeup_report.pdf summarizing the results -- SUBMITTED
 
-####2. Submission includes functional code
+#### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```sh
 python drive.py model.h5
 ```
 
-####3. Submission code is usable and readable
+#### 3. Submission code is usable and readable
 
 The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. An appropriate model architecture has been employed
+#### 1. An appropriate model architecture has been employed
 
 Basically I am using the Nvidia Architecture with slight change by adding a dropout layer and cropping the unnessary part
 
@@ -71,17 +71,17 @@ Basically I am using the Nvidia Architecture with slight change by adding a drop
 
 
 
-####2. Attempts to reduce overfitting in the model
+#### 2. Attempts to reduce overfitting in the model
 
 Add a Dropout layer with prob = 0.5 after the Flatten to provide overfitting.   Without the Dropout layer, the car still able to finish the lap in this model, but it aligned
 to the right side. It is improved after adding a drop out layer.
 
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 
 The adam optimizer parameter is default learning rate = 0.001
 
-####4. Appropriate training data
+#### 4. Appropriate training data
 
 I combined four set of training data
 * completed lap on counter clockwise
@@ -91,9 +91,9 @@ I combined four set of training data
 
 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Solution Design Approach
+#### 1. Solution Design Approach
 
 
 THe first approach is using default data and LeNet model.   Not really working, the error rate is too high and get off track almost immediate after start.
@@ -109,7 +109,7 @@ Increase the correction value to 0.25, seems better.   Tried couple round with h
 The car is more aligned to the right hand side of the road, probably get overfitting the data on that.  Add a 0.5 probability Dropout.  The car is moving back to the center lane.  However, from some wide turn, it stay on left side before it do the big turn.   I think it is from training data.   But no offtrack after 10 laps.
 
 
-####2. Final Model Architecture
+#### 2. Final Model Architecture
 ------------------------------------------------------------
 | Normalized			| Lamda x/255 - 0.5                |
 | Cropping images       | Cropping top 70, bottome 25      |
@@ -128,14 +128,14 @@ The car is more aligned to the right hand side of the road, probably get overfit
 
 ![alt text]Training Mean Square Loss[image1]
 
-####3. Creation of the Training Set & Training Process
+#### 3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
 ![alt text]Training Video[image2]
 
 
-#####3. Final Result
+##### 4. Final Result
 The video show the car is able to drive at least 2 laps autonomously. 
 
 ![alt text]Autonomous Video[image3]
